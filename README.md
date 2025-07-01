@@ -15,7 +15,7 @@ This dataset contains **84,781** census tracts linking them to a variety of Cens
   - Metropolitan division and code (where available)
 - GIS calculations
   - Square Miles (calculated while using WGS 1984)
-  - Desnity = Population / Square Miles
+  - Density = Population / Square Miles
   - Distance to CBSA center (CBSA center defined as lat/lon of city hall of central city) plus percentiles
 - Census Regions and Divisions
 
