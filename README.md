@@ -1,21 +1,35 @@
 # tracts_2020_where
 This file provides descriptor values for where 2020 census tracts are located such as Census region and subdivision, CBSA, place, etc.
-# 📊 Tract-to-Place Dataset
 
-This dataset contains **84,781** records linking 2020 U.S. Census tracts to Census-defined places (cities and towns). It includes detailed geographic, demographic, and metropolitan context for use in spatial, housing, and urban-suburban classification analyses.
+This dataset contains **84,781** census tracts linking them to a variety of Census definitions:
+- Census tract
+  - 2020 census tract GEOID
+  - 2022 census tract GEOID (this accounts for Connecticut's changed census tract GEOIDs)
+  - 2020 decennial census total population
+- Census Place (Using 2022 GeoCorr with population weight) including how the tract was related (whether all or part of the tract is part of the place)
+-   Place name and title
+- CBSA definitions
+  - CBSA code and title
+  - CSA code and title
+  - Central or Outlying county
+  - Metropolitan division and code (where available)
+- GIS calculations
+  - Square Miles (calculated while using WGS 1984)
+  - Desnity = Population / Square Miles
+  - Distance to CBSA center (CBSA center defined as lat/lon of city hall of central city) plus percentiles
+- Census Regions and Divisions
 
 ---
 
-## 📁 Dataset Overview
+## Dataset Overview
 
 - **Records:** 84,781
-- **Unit of Analysis:** 2020 Census Tracts joined to Places
-- **Geographic Coverage:** All 50 states, District of Columbia, and U.S. territories
-- **Key Join Fields:** `TRACT20`, `PLACE`
+- **Geographic Unit** 2020 census tract delineations (includes 2020 and 2022 census tract GEOIDs)
+- **Geographic Coverage:** All 50 states, District of Columbia, and Puerto Rico. Other territories are not included
 
 ---
 
-## 🧾 Selected Fields
+##  Fields
 
 | Column | Type     | Description |
 |--------|----------|-------------|
