@@ -86,6 +86,51 @@ This dataset is shared for research use. Attribution encouraged but not required
 
 ---
 
+## Additional Information
+
+This project uses two versions of 2020 Census tract geometries from the U.S. Census Bureau TIGERweb ArcGIS REST services.
+
+### 1. 2020 Census Tracts (Generalized — Water Removed)
+
+Generalized tract boundaries with large water areas removed (cartographic use).
+
+**Source:**  
+https://tigerweb.geo.census.gov/arcgis/rest/services/Generalized_TAB2020/Tracts_Blocks/MapServer/3
+
+- Simplified geometry  
+- Water areas clipped  
+- Optimized for web mapping and performance  
+- Smaller file size  
+- Appropriate for visualization and dashboard applications  
+
+---
+
+### 2. 2020 Census Tracts (Full Administrative Boundaries)
+
+Full TIGER/Line administrative tract boundaries, including water areas.
+
+**Source:**  
+https://tigerweb.geo.census.gov/arcgis/rest/services/Census2020/Tracts_Blocks/MapServer/0
+
+- Complete legal tract boundaries  
+- Includes inland and coastal water  
+- Larger geometry size  
+- Appropriate for analysis requiring official boundary extents  
+
+---
+
+### When to Use Each
+
+| Use Case | Recommended Layer |
+|----------|-------------------|
+| Web mapping / performance-sensitive apps | Generalized (water removed) |
+| Spatial analysis / official geography alignment | Full administrative boundaries |
+| Area calculations | Full administrative boundaries |
+| Visual overlays where water is not needed | Generalized |
+
+--
+
+
 ## ❓Questions
 
 For questions or suggestions, feel free to open an issue or contact me.
